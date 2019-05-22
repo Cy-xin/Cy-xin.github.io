@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>线程的三种实现方法。 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="多线程创建的三种方式： 一，创建线程第一种方式（继承Thread）：  1，自定义一个类，继承java.lang包下的Thread类  2，重写run方法  3，将要在线程中执行的代码编写在run方法中  4，创建上面自定义类的对象  5，调用start方法启动线程。   class MyThread extends Thread{ //2，重写run方法 @Override public voi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线程的三种实现方法。">
+<meta property="og:url" content="http://yoursite.com/2019/05/22/线程/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="多线程创建的三种方式： 一，创建线程第一种方式（继承Thread）：  1，自定义一个类，继承java.lang包下的Thread类  2，重写run方法  3，将要在线程中执行的代码编写在run方法中  4，创建上面自定义类的对象  5，调用start方法启动线程。   class MyThread extends Thread{ //2，重写run方法 @Override public voi">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-05-22T08:08:06.202Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="线程的三种实现方法。">
+<meta name="twitter:description" content="多线程创建的三种方式： 一，创建线程第一种方式（继承Thread）：  1，自定义一个类，继承java.lang包下的Thread类  2，重写run方法  3，将要在线程中执行的代码编写在run方法中  4，创建上面自定义类的对象  5，调用start方法启动线程。   class MyThread extends Thread{ //2，重写run方法 @Override public voi">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -144,76 +148,333 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-线程" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/22/线程/" class="archive-article-date">
-  	<time datetime="2019-05-22T03:57:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/22/线程/">线程的三种实现方法。</a>
+    <h1 class="article-title" itemprop="name">
+      线程的三种实现方法。
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/22/我的第一篇博客文章/" class="archive-article-date">
+        
+        <a href="/2019/05/22/线程/" class="archive-article-date">
   	<time datetime="2019-05-22T03:57:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/22/我的第一篇博客文章/">我的第一篇博客文章</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>多线程创建的三种方式：</p>
+<p>一，创建线程第一种方式（继承Thread）：</p>
+<ul>
+<li><p>1，自定义一个类，继承java.lang包下的Thread类</p>
+</li>
+<li><p>2，重写run方法</p>
+</li>
+<li><p>3，将要在线程中执行的代码编写在run方法中</p>
+</li>
+<li><p>4，创建上面自定义类的对象</p>
+</li>
+<li><p>5，调用start方法启动线程。</p>
+</li>
+</ul>
+<p>class MyThread extends Thread{</p>
+<p>//2，重写run方法</p>
+<p>@Override</p>
+<pre><code>public void run() {
+</code></pre><p>//3，将要在线程中执行的代码编写在run方法中</p>
+<pre><code>for (int i = 0; i &lt; 10; i++) {
+</code></pre><p>System.out.println(“hello”);</p>
+<pre><code>    }
 
-        <div class="article-info info-on-right">
-          
-          
+}
+</code></pre><p>}</p>
+<p>public class ThreadTest01 {</p>
+<p>public static void main(String[] args) {</p>
+<p>//    4，创建上面自定义类的对象</p>
+<p>MyThread mt = new MyThread();</p>
+<p>//    5，调用start方法启动线程。</p>
+<p>mt.start();</p>
+<p>for (int i = 0; i &lt; 10; i++) {</p>
+<p>System.out.println(“2019”);</p>
+<pre><code>    }
 
+}
+</code></pre><p>}<br>二，创建线程第二种方式（实现Runnable接口）：</p>
+<ul>
+<li><p>1,自定义一个类，实现java.lang包下的Runnable接口</p>
+</li>
+<li><p>2,重写run方法</p>
+</li>
+<li><p>3,将要在线程中执行的代码编写在run方法中</p>
+</li>
+<li><p>4,创建上面自定义类的对象</p>
+</li>
+<li><p>5,创建Thread对象并将上面自定义类的对象作为参数传递给Thread的构造方法中。</p>
+</li>
+<li><p>6,调用start方法启动线程</p>
+</li>
+</ul>
+<p>//1,自定义一个类，实现java.lang包下的Runnable接口</p>
+<p>class MyRunnable implements Runnable{</p>
+<p>//2,重写run方法</p>
+<p>@Override</p>
+<p>public void run() {</p>
+<p>//    3,将要在线程中执行的代码编写在run方法中</p>
+<p>for (int i = 0; i &lt; 100; i++) {</p>
+<p>System.out.println(“hello”);</p>
+<pre><code>    }
+
+}
+</code></pre><p>}</p>
+<p>public class ThreadTest02 {</p>
+<p>public static void main(String[] args) {</p>
+<p>//4,创建上面自定义类的对象</p>
+<p>MyRunnable mr = new MyRunnable();</p>
+<p>//5,创建Thread对象并将上面自定义类的对象作为参数传递给Thread的构造方法中。</p>
+<p>Thread t = new Thread(mr);</p>
+<p>//    6,调用start方法启动线程</p>
+<p>t.start();</p>
+<p>for (int i = 0; i &lt; 100; i++) {</p>
+<p>System.out.println(“2019”);</p>
+<pre><code>    }
+
+}
+</code></pre><p>}<br>三，创建线程第三种方式（实现Callable接口）：</p>
+<ul>
+<li><p>1,自定义一个类实现java.util.concurrent包下的Callable接口。</p>
+</li>
+<li><p>2，重写Call方法。</p>
+</li>
+<li><p>3，将要在线程中执行的代码编写在call方法中</p>
+</li>
+<li><p>4，创建ExecutorSercice线程池.</p>
+</li>
+<li><p>5,将自定义的对象放入线程池中。</p>
+</li>
+<li><p>6，获取线程返回结果。</p>
+</li>
+<li><p>7，关闭线程，不在接受新的线程，未执行的完的线程不会被关闭。</p>
+</li>
+</ul>
+<p>//1,自定义一个类实现java.util.concurrent包下的Callable接口。</p>
+<p>class MyCallable implements Callable<integer>{</integer></p>
+<p>private int count;</p>
+<p>public MyCallable(int count) {</p>
+<pre><code>this.count = count;
+
+}
+</code></pre><p>//2，重写Call方法。</p>
+<p>@Override</p>
+<p>public Integer call() throws Exception {</p>
+<p>//3，将要在线程中执行的代码编写在call方法中</p>
+<pre><code>int sum = 1;
+
+if (count == 0) {
+
+sum = 0;
+
+    }else {
+</code></pre><p>for (int i = 1; i &lt;= count; i++) {</p>
+<pre><code>sum *= i;
+
+        }
+
+    }
+</code></pre><p>return sum;</p>
+<pre><code>}
+</code></pre><p>}</p>
+<p>public class ThreadTest03 {</p>
+<p>public static void main(String[] args) throws InterruptedException, ExecutionException {</p>
+<p>//4，创建ExecutorSercice线程池.</p>
+<p>//ExecutorService es = Executors.newFixedThreadPool(2);</p>
+<p>//自动分配线程</p>
+<pre><code>ExecutorService es = Executors.newCachedThreadPool();
+</code></pre><p>//5,将自定义的对象放入线程池中。</p>
+<pre><code>Future&lt;Integer&gt; f1 = es.submit(new MyCallable(5));
+
+Future&lt;Integer&gt; f2 = es.submit(new MyCallable(3));
+</code></pre><p>//6，获取线程返回结果。</p>
+<p>//    System.out.println(f1.get());</p>
+<p>//    System.out.println(f2.get());</p>
+<p>//判断线程中的任务是否执行完毕</p>
+<p>if (f1.isDone()) {</p>
+<pre><code>System.out.println(f1.get());
+
+    }else {
+
+System.out.println(&quot;f1线程未执行完毕！&quot;);
+
+    }
+</code></pre><p>if (f2.isDone()) {</p>
+<pre><code>System.out.println(f2.get());
+
+    }else {
+
+System.out.println(&quot;f2线程未执行完毕！&quot;);
+
+    }
+</code></pre><p>//7，关闭线程，不在接受新的线程，未执行的完的线程不会被关闭。</p>
+<pre><code>es.shutdown();
+
+}
+</code></pre><p>}<br>三种方式的对比：</p>
+<p>继承Thread</p>
+<ul>
+<li><p>优点:可以直接使用Thread类中的方法,代码简单</p>
+</li>
+<li><p>缺点:继承Thread类之后就不能继承其他的类</p>
+</li>
+</ul>
+<p>实现Runnable接口</p>
+<ul>
+<li><p>优点:即使自定义类已经有父类了也不受影响，因为可以实现多个接口</p>
+</li>
+<li><p>缺点: 在run方法内部需要获取到当前线程的Thread对象后才能使用Thread中的方法</p>
+</li>
+</ul>
+<p>实现Callable接口</p>
+<ul>
+<li><p>优点：可以获取返回值，可以抛出异常</p>
+</li>
+<li><p>缺点：代码编写较为复杂</p>
+</li>
+</ul>
+<p>使用哪一种视情况而定！</p>
+<hr>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/22/线程/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/05/22/我的第一篇博客文章/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇博客文章</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -236,8 +497,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
