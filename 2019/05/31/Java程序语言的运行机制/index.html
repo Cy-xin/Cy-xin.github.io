@@ -96,16 +96,19 @@
 
 
 
-  <meta name="description" content="努力学习中！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="醉卧沙场君莫笑の博客">
-<meta property="og:url" content="https://cy-xin.github.io/index.html">
+  <meta name="description" content="高级语言的运行机制 程序的执行方式 编译型 编译型语言使用专门的编译器，针对特定的平台将某种高级语言源代码一次性“翻译”成可被该平台硬件执行的机器码，并包装成该平台的所能识别的可执行性程序的格式。编译生成的可执行程序可以脱离开发环境，在特定的平台上独立于行。如C、C++等   解释型 解释型语言使用专门的解释器对源程序进行逐行解释成特定平台的机器码，并立即执行的语言。又一个很大的优势：跨平台容易。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java程序语言的运行机制">
+<meta property="og:url" content="https://cy-xin.github.io/2019/05/31/Java程序语言的运行机制/index.html">
 <meta property="og:site_name" content="醉卧沙场君莫笑の博客">
-<meta property="og:description" content="努力学习中！">
+<meta property="og:description" content="高级语言的运行机制 程序的执行方式 编译型 编译型语言使用专门的编译器，针对特定的平台将某种高级语言源代码一次性“翻译”成可被该平台硬件执行的机器码，并包装成该平台的所能识别的可执行性程序的格式。编译生成的可执行程序可以脱离开发环境，在特定的平台上独立于行。如C、C++等   解释型 解释型语言使用专门的解释器对源程序进行逐行解释成特定平台的机器码，并立即执行的语言。又一个很大的优势：跨平台容易。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190531152812431.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEwNzYxNw==,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-05-31T07:46:13.606Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="醉卧沙场君莫笑の博客">
-<meta name="twitter:description" content="努力学习中！">
+<meta name="twitter:title" content="Java程序语言的运行机制">
+<meta name="twitter:description" content="高级语言的运行机制 程序的执行方式 编译型 编译型语言使用专门的编译器，针对特定的平台将某种高级语言源代码一次性“翻译”成可被该平台硬件执行的机器码，并包装成该平台的所能识别的可执行性程序的格式。编译生成的可执行程序可以脱离开发环境，在特定的平台上独立于行。如C、C++等   解释型 解释型语言使用专门的解释器对源程序进行逐行解释成特定平台的机器码，并立即执行的语言。又一个很大的优势：跨平台容易。">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190531152812431.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEwNzYxNw==,size_16,color_FFFFFF,t_70">
 
 
 
@@ -113,7 +116,7 @@
 
   
   
-  <link rel="canonical" href="https://cy-xin.github.io/">
+  <link rel="canonical" href="https://cy-xin.github.io/2019/05/31/Java程序语言的运行机制/">
 
 
 
@@ -123,7 +126,7 @@
   };
 </script>
 
-  <title>醉卧沙场君莫笑の博客</title>
+  <title>Java程序语言的运行机制 | 醉卧沙场君莫笑の博客</title>
   
 
 
@@ -171,8 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,7 +216,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -259,9 +261,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -293,10 +295,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/31/Java程序语言的运行机制/" class="post-title-link" itemprop="url">Java程序语言的运行机制</a>
+          <h1 class="post-title" itemprop="name headline">Java程序语言的运行机制
+
               
             
           </h1>
@@ -360,9 +360,7 @@
       
 
       
-        
-          
-            <h1 id="高级语言的运行机制"><a href="#高级语言的运行机制" class="headerlink" title="高级语言的运行机制"></a>高级语言的运行机制</h1><hr>
+        <h1 id="高级语言的运行机制"><a href="#高级语言的运行机制" class="headerlink" title="高级语言的运行机制"></a>高级语言的运行机制</h1><hr>
 <h2 id="程序的执行方式"><a href="#程序的执行方式" class="headerlink" title="程序的执行方式"></a>程序的执行方式</h2><ol>
 <li>编译型<blockquote>
 <p>编译型语言使用专门的编译器，针对特定的平台将某种高级语言源代码一次性“翻译”成可被该平台硬件执行的机器码，并包装成该平台的所能识别的可执行性程序的格式。编译生成的可执行程序可以脱离开发环境，在特定的平台上独立于行。如C、C++等</p>
@@ -381,11 +379,16 @@
 <p>故Java语言跨平台就是因为有这个转化器（JVM）！</p>
 </blockquote>
 
-          
-        
       
     </div>
 	<div>
+		
+			<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
 		
 	</div>
 
@@ -405,166 +408,57 @@
     
 
     
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>醉卧沙场君莫笑</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="https://cy-xin.github.io/2019/05/31/Java程序语言的运行机制/" title="Java程序语言的运行机制">https://cy-xin.github.io/2019/05/31/Java程序语言的运行机制/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cy-xin.github.io/2019/05/22/我的第一篇博客文章/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="醉卧沙场君莫笑">
-      <meta itemprop="description" content="努力学习中！">
-      <meta itemprop="image" content="/images/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="醉卧沙场君莫笑の博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/22/我的第一篇博客文章/" class="post-title-link" itemprop="url">我的第一篇博客文章</a>
-              
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/2019/05/22/我的第一篇博客文章/" rel="next" title="我的第一篇博客文章">
+                <i class="fa fa-chevron-left"></i> 我的第一篇博客文章
+              </a>
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-22 11:57:10 / 修改时间：16:04:38" itemprop="dateCreated datePublished" datetime="2019-05-22T11:57:10+08:00">2019-05-22</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>I know that the day will come when my sight of this earth shall be lost,<br>and life will take its leave in silence,<br>drawing the last curtain over my eyes.<br>Yet stars will watch at night, and morning rise as before, and hours heave like sea waves casting up pleasures and pains.<br>When I think of this end of my moments, the barrier of the moments breaks and I see by the light of death thy world with its careless treasures.<br>Rare is its lowliest seat, rare is its meanest of lives.<br>Things that I longed for in vain and things that I got—let them pass.<br>Let me but truly possess the things that I ever spurned and overlooked.</p>
-<p>–</p>
-
-          
-        
-      
-    </div>
-	<div>
-		
-	</div>
-
-    
-
-
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -574,14 +468,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -601,8 +496,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -687,6 +591,24 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#高级语言的运行机制"><span class="nav-number">1.</span> <span class="nav-text">高级语言的运行机制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#程序的执行方式"><span class="nav-number">1.1.</span> <span class="nav-text">程序的执行方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java运行和JVM"><span class="nav-number">1.2.</span> <span class="nav-text">Java运行和JVM</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+		
+      <!--/noindex-->
       
 
       
@@ -817,6 +739,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -832,6 +758,8 @@
 
   
 
+
+  
 
 
   
