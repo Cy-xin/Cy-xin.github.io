@@ -362,26 +362,26 @@
       
         
           
-            <h1 id="高级语言的运行机制"><a href="#高级语言的运行机制" class="headerlink" title="高级语言的运行机制"></a>高级语言的运行机制</h1><hr>
-<h2 id="程序的执行方式"><a href="#程序的执行方式" class="headerlink" title="程序的执行方式"></a>程序的执行方式</h2><ol>
-<li>编译型<blockquote>
-<p>编译型语言使用专门的编译器，针对特定的平台将某种高级语言源代码一次性“翻译”成可被该平台硬件执行的机器码，并包装成该平台的所能识别的可执行性程序的格式。编译生成的可执行程序可以脱离开发环境，在特定的平台上独立于行。如C、C++等</p>
-</blockquote>
-</li>
-<li>解释型<blockquote>
-<p>解释型语言使用专门的解释器对源程序进行逐行解释成特定平台的机器码，并立即执行的语言。又一个很大的优势：跨平台容易。</p>
-</blockquote>
-<h2 id="Java运行和JVM"><a href="#Java运行和JVM" class="headerlink" title="Java运行和JVM"></a>Java运行和JVM</h2>Java语言编写的程序需要经过编译步骤，但这个变异的步骤不会产生特定平台的机器码，而是会生成一种与平台无关的字节码（*.class文件）。这个字节码不可以执行，需要通过Java解释器进行解释执行。<blockquote>
-<p>即Java语言不是纯粹的编译型语言，也不是纯粹的解释型语言。<br>Java语言必须经过先编译，再解释。</p>
-</blockquote>
-</li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/20190531152812431.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEwNzYxNw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>其中Java解释执行字节码文件的是Java虚拟机（JVM）。所有平台上的JVM向编译器提供相同的编程接口，而编译器只需要面向虚拟机，生成虚拟机能理解的代码，然后有虚拟机来解释执行。<br>那么相同的字节程序需要在不同平台运行，这几乎是很难的，所以，只有通过中间转换器才可以实现，而这个转换器就是JVM。<br>通俗的讲：<br><strong>有两支笔（系统平台），需要把同一个笔帽（字节码文件）都能在这两支笔上套上（运行），那么只有这两支笔分别提供一个转换器（JVM），那么这个转化器向上的接口相同（接收同一个字节码文件），用于适用同一个笔帽；向下的接口不同，用于适用两支不同的笔。</strong></p>
-<blockquote>
-<p>故Java语言跨平台就是因为有这个转化器（JVM）！</p>
-</blockquote>
+            <p>
+              高级语言的运行机制
+程序的执行方式
+编译型
+编译型语言使用专门的编译器，针对特定的平台将某种高级语言源代码一次性“翻译”成可被该平台硬件执行的机器码，并包装成该平台的所能识别的可执行性程序的格式。编译生成的可执行程序可以脱离开发环境，在特定的平台上独立于行。如C、C++等
 
+
+解释型
+解释型语言使用
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/31/Java程序语言的运行机制/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -527,10 +527,19 @@
       
         
           
-            <p>I know that the day will come when my sight of this earth shall be lost,<br>and life will take its leave in silence,<br>drawing the last curtain over my eyes.<br>Yet stars will watch at night, and morning rise as before, and hours heave like sea waves casting up pleasures and pains.<br>When I think of this end of my moments, the barrier of the moments breaks and I see by the light of death thy world with its careless treasures.<br>Rare is its lowliest seat, rare is its meanest of lives.<br>Things that I longed for in vain and things that I got—let them pass.<br>Let me but truly possess the things that I ever spurned and overlooked.</p>
-<p>–</p>
-
+            <p>
+              I know that the day will come when my sight of this earth shall be lost,and life will take its leave in silence,drawing the last curtain over my eyes.
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/22/我的第一篇博客文章/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
