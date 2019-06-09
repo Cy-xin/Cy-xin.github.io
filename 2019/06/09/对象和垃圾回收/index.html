@@ -96,19 +96,19 @@
 
 
 
-  <meta name="description" content="基本数据的类型转换Java语言中的基本数据类型分为为两大类：Boolean类型和数值类型。数值类型分为整数型和浮点类型。Java只包含8种基本数据类型。|类型| 字节数 ||–|–|| byte | 一个字节 || short | 2个字节 || long | 8个字节 || int | 4个字节 || char | 2个字节 || float | 4个字节 || double | 8个字节 ||">
+  <meta name="description" content="对象与垃圾回收Java垃圾回收是Java语言的重要功能之一。当创建对象、数组等引用类型实体时，系统都会在堆内存中位置分配一块内存区，对象就保存在这个内存区中。当这块内存不在被任何引用变量引用时，这块内存就变成了垃圾，等待回收机制在合适的时候进行回收。 垃圾回收机制有如下特征：  垃圾回收机制只负责堆内存中的对象。 垃圾回收会在合适的时候进行回收。当对象永久性的不再被引用，系统会在合适的时候回收它所">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基本数据类型转换">
-<meta property="og:url" content="https://cy-xin.github.io/2019/06/02/基本数据类型转换/index.html">
+<meta property="og:title" content="对象和垃圾回收">
+<meta property="og:url" content="https://cy-xin.github.io/2019/06/09/对象和垃圾回收/index.html">
 <meta property="og:site_name" content="醉卧沙场君莫笑の博客">
-<meta property="og:description" content="基本数据的类型转换Java语言中的基本数据类型分为为两大类：Boolean类型和数值类型。数值类型分为整数型和浮点类型。Java只包含8种基本数据类型。|类型| 字节数 ||–|–|| byte | 一个字节 || short | 2个字节 || long | 8个字节 || int | 4个字节 || char | 2个字节 || float | 4个字节 || double | 8个字节 ||">
+<meta property="og:description" content="对象与垃圾回收Java垃圾回收是Java语言的重要功能之一。当创建对象、数组等引用类型实体时，系统都会在堆内存中位置分配一块内存区，对象就保存在这个内存区中。当这块内存不在被任何引用变量引用时，这块内存就变成了垃圾，等待回收机制在合适的时候进行回收。 垃圾回收机制有如下特征：  垃圾回收机制只负责堆内存中的对象。 垃圾回收会在合适的时候进行回收。当对象永久性的不再被引用，系统会在合适的时候回收它所">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190602170813170.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEwNzYxNw==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-06-02T09:49:44.167Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190609183537750.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEwNzYxNw==,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-06-09T10:48:20.898Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基本数据类型转换">
-<meta name="twitter:description" content="基本数据的类型转换Java语言中的基本数据类型分为为两大类：Boolean类型和数值类型。数值类型分为整数型和浮点类型。Java只包含8种基本数据类型。|类型| 字节数 ||–|–|| byte | 一个字节 || short | 2个字节 || long | 8个字节 || int | 4个字节 || char | 2个字节 || float | 4个字节 || double | 8个字节 ||">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190602170813170.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEwNzYxNw==,size_16,color_FFFFFF,t_70">
+<meta name="twitter:title" content="对象和垃圾回收">
+<meta name="twitter:description" content="对象与垃圾回收Java垃圾回收是Java语言的重要功能之一。当创建对象、数组等引用类型实体时，系统都会在堆内存中位置分配一块内存区，对象就保存在这个内存区中。当这块内存不在被任何引用变量引用时，这块内存就变成了垃圾，等待回收机制在合适的时候进行回收。 垃圾回收机制有如下特征：  垃圾回收机制只负责堆内存中的对象。 垃圾回收会在合适的时候进行回收。当对象永久性的不再被引用，系统会在合适的时候回收它所">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190609183537750.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEwNzYxNw==,size_16,color_FFFFFF,t_70">
 
 
 
@@ -116,7 +116,7 @@
 
   
   
-  <link rel="canonical" href="https://cy-xin.github.io/2019/06/02/基本数据类型转换/">
+  <link rel="canonical" href="https://cy-xin.github.io/2019/06/09/对象和垃圾回收/">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>基本数据类型转换 | 醉卧沙场君莫笑の博客</title>
+  <title>对象和垃圾回收 | 醉卧沙场君莫笑の博客</title>
   
 
 
@@ -278,7 +278,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cy-xin.github.io/2019/06/02/基本数据类型转换/">
+    <link itemprop="mainEntityOfPage" href="https://cy-xin.github.io/2019/06/09/对象和垃圾回收/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="醉卧沙场君莫笑">
@@ -295,7 +295,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">基本数据类型转换
+          <h1 class="post-title" itemprop="name headline">对象和垃圾回收
 
               
             
@@ -321,7 +321,7 @@
                 
               
 
-              <time title="创建时间：2019-06-02 17:43:31 / 修改时间：17:49:44" itemprop="dateCreated datePublished" datetime="2019-06-02T17:43:31+08:00">2019-06-02</time>
+              <time title="创建时间：2019-06-09 18:48:13 / 修改时间：18:48:20" itemprop="dateCreated datePublished" datetime="2019-06-09T18:48:13+08:00">2019-06-09</time>
             
 
             
@@ -360,14 +360,20 @@
       
 
       
-        <h2 id="基本数据的类型转换"><a href="#基本数据的类型转换" class="headerlink" title="基本数据的类型转换"></a>基本数据的类型转换</h2><p>Java语言中的基本数据类型分为为两大类：<strong>Boolean类型和数值类型</strong>。数值类型分为整数型和浮点类型。Java只包含8种基本数据类型。<br>|类型| 字节数 |<br>|–|–|<br>| byte | 一个字节 |<br>| short | 2个字节 |<br>| long | 8个字节 |<br>| int | 4个字节 |<br>| char | 2个字节 |<br>| float | 4个字节 |<br>| double | 8个字节 |<br>| boolean | \ |<br>Java语言中所提供的7中数值类型之间可以相互转换，有来那个中类型转换方式：<strong>自动转换和强制类型转换</strong>。</p>
+        <h1 id="对象与垃圾回收"><a href="#对象与垃圾回收" class="headerlink" title="对象与垃圾回收"></a>对象与垃圾回收</h1><p>Java垃圾回收是Java语言的重要功能之一。当创建对象、数组等引用类型实体时，系统都会在堆内存中位置分配一块内存区，对象就保存在这个内存区中。当这块内存不在被任何引用变量引用时，这块内存就变成了垃圾，等待回收机制在合适的时候进行回收。</p>
+<p>垃圾回收机制有如下特征：</p>
+<ul>
+<li>垃圾回收机制只负责堆内存中的对象。</li>
+<li>垃圾回收会在合适的时候进行回收。当对象永久性的不再被引用，系统会在合适的时候回收它所占用的内存。</li>
+<li>在垃圾回收机制回收任何对象之前，总会先调用它的finalize()方法，该方法可能使对象重新复活，从而导致垃圾回收机制取消回收。</li>
+</ul>
+<h2 id="对象在内存中状态"><a href="#对象在内存中状态" class="headerlink" title="对象在内存中状态"></a>对象在内存中状态</h2><p>分为三种状态：<strong>可达状态、可恢复状态、不可达状态</strong>。</p>
 <ol>
-<li>自动类型转换<br>把一个表述范围小的数值或变量直接赋给另一个表数范围大的变量时，系统可以进行自动类型转换，否则需要强制类型转换。例如一个大瓶水和一各小瓶水，当把小瓶水导入大瓶水时不会有任何问题。<br><img src="https://img-blog.csdnimg.cn/20190602170813170.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEwNzYxNw==,size_16,color_FFFFFF,t_70" alt="自动类型转换"><blockquote>
-<p>如果希望把基本数据类型的值转换为对应的字符串时，可以把基本数据类型的值和一个空字符串进行连接。<br><code>String str= 1.5f + &quot; &quot;;</code><br>   <code>//下面输出1.5</code><br><code>System.out.println(str);</code></p>
-</blockquote>
-</li>
-<li>强制类型转换<br>如果希望把上图中的箭头右边的类型转换为箭头左边的类型，就需要进行强制类型转换。强制类型转换的语法格式为：<code>（targetType）value</code>，例如把大瓶水导入小瓶水中，如果大瓶水少还行，但如果多的话，那么导入小瓶水就会溢出，从而导致数据丢失。</li>
+<li>可达状态：对象创建之后，若又一个以上的引用变量引用它，则这个对象就处于可达状态。程序通过引用变量来调用这个对象的方法和实例变量。</li>
+<li>可恢复状态：如果程序中某个对象不再有任何引用变量引用它，它处于可恢复状态。在这个状态下，垃圾回收准备回收对象所占用的内存，在回收任对象之前，系统会先调用所有可恢复状态的对象的finalize()方法进行资源管理。若重新引用，则变成可达状态，否则进入不可达状态。</li>
+<li>不可达状态：当对象与所有的引用变量的关联被切断，系统调用了finalize()方法依然没有达到可达状态，那么这个对象将永久性的失去引用，最后变成不可达状态。处于不可达状态的对象，系统才会真正回收该对象所占用的资源。</li>
 </ol>
+<p><img src="https://img-blog.csdnimg.cn/20190609183537750.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEwNzYxNw==,size_16,color_FFFFFF,t_70" alt="对象状态转换图"></p>
 
       
     </div>
@@ -414,7 +420,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://cy-xin.github.io/2019/06/02/基本数据类型转换/" title="基本数据类型转换">https://cy-xin.github.io/2019/06/02/基本数据类型转换/</a>
+    <a href="https://cy-xin.github.io/2019/06/09/对象和垃圾回收/" title="对象和垃圾回收">https://cy-xin.github.io/2019/06/09/对象和垃圾回收/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -434,8 +440,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/31/Java程序语言的运行机制/" rel="next" title="Java程序语言的运行机制">
-                <i class="fa fa-chevron-left"></i> Java程序语言的运行机制
+              <a href="/2019/06/08/多态/" rel="next" title="多态">
+                <i class="fa fa-chevron-left"></i> 多态
               </a>
             
           </div>
@@ -443,10 +449,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/02/为什么会有栈内存和堆内存/" rel="prev" title="为什么会有栈内存和堆内存">
-                为什么会有栈内存和堆内存 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -596,7 +598,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本数据的类型转换"><span class="nav-number">1.</span> <span class="nav-text">基本数据的类型转换</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#对象与垃圾回收"><span class="nav-number">1.</span> <span class="nav-text">对象与垃圾回收</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#对象在内存中状态"><span class="nav-number">1.1.</span> <span class="nav-text">对象在内存中状态</span></a></li></ol></li></ol></div>
             
 
           </div>
