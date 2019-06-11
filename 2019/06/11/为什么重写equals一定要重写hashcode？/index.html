@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="I know that the day will come when my sight of this earth shall be lost,and life will take its leave in silence,drawing the last curtain over my eyes.Yet stars will watch at night, and morning rise as">
+  <meta name="description" content="重写equals、hashcodeStudent类的重写后的equals方法和hashcode方法。 1234567891011121314151617181920212223242526272829303132public class EqualsAndHashcode &amp;#123;	private String name;	private int age;		@Override	public">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客文章">
-<meta property="og:url" content="https://cy-xin.github.io/2019/05/22/我的第一篇博客文章/index.html">
+<meta property="og:title" content="为什么重写equals一定要重写hashcode？">
+<meta property="og:url" content="https://cy-xin.github.io/2019/06/11/为什么重写equals一定要重写hashcode？/index.html">
 <meta property="og:site_name" content="醉卧沙场君莫笑の博客">
-<meta property="og:description" content="I know that the day will come when my sight of this earth shall be lost,and life will take its leave in silence,drawing the last curtain over my eyes.Yet stars will watch at night, and morning rise as">
+<meta property="og:description" content="重写equals、hashcodeStudent类的重写后的equals方法和hashcode方法。 1234567891011121314151617181920212223242526272829303132public class EqualsAndHashcode &amp;#123;	private String name;	private int age;		@Override	public">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-22T08:04:38.981Z">
+<meta property="og:updated_time" content="2019-06-11T13:25:58.584Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的第一篇博客文章">
-<meta name="twitter:description" content="I know that the day will come when my sight of this earth shall be lost,and life will take its leave in silence,drawing the last curtain over my eyes.Yet stars will watch at night, and morning rise as">
+<meta name="twitter:title" content="为什么重写equals一定要重写hashcode？">
+<meta name="twitter:description" content="重写equals、hashcodeStudent类的重写后的equals方法和hashcode方法。 1234567891011121314151617181920212223242526272829303132public class EqualsAndHashcode &amp;#123;	private String name;	private int age;		@Override	public">
 
 
 
@@ -114,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="https://cy-xin.github.io/2019/05/22/我的第一篇博客文章/">
+  <link rel="canonical" href="https://cy-xin.github.io/2019/06/11/为什么重写equals一定要重写hashcode？/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>我的第一篇博客文章 | 醉卧沙场君莫笑の博客</title>
+  <title>为什么重写equals一定要重写hashcode？ | 醉卧沙场君莫笑の博客</title>
   
 
 
@@ -276,7 +276,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cy-xin.github.io/2019/05/22/我的第一篇博客文章/">
+    <link itemprop="mainEntityOfPage" href="https://cy-xin.github.io/2019/06/11/为什么重写equals一定要重写hashcode？/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="醉卧沙场君莫笑">
@@ -293,7 +293,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">我的第一篇博客文章
+          <h1 class="post-title" itemprop="name headline">为什么重写equals一定要重写hashcode？
 
               
             
@@ -319,7 +319,7 @@
                 
               
 
-              <time title="创建时间：2019-05-22 11:57:10 / 修改时间：16:04:38" itemprop="dateCreated datePublished" datetime="2019-05-22T11:57:10+08:00">2019-05-22</time>
+              <time title="创建时间：2019-06-11 21:25:50 / 修改时间：21:25:58" itemprop="dateCreated datePublished" datetime="2019-06-11T21:25:50+08:00">2019-06-11</time>
             
 
             
@@ -358,8 +358,15 @@
       
 
       
-        <p>I know that the day will come when my sight of this earth shall be lost,<br>and life will take its leave in silence,<br>drawing the last curtain over my eyes.<br>Yet stars will watch at night, and morning rise as before, and hours heave like sea waves casting up pleasures and pains.<br>When I think of this end of my moments, the barrier of the moments breaks and I see by the light of death thy world with its careless treasures.<br>Rare is its lowliest seat, rare is its meanest of lives.<br>Things that I longed for in vain and things that I got—let them pass.<br>Let me but truly possess the things that I ever spurned and overlooked.</p>
-<p>–</p>
+        <h2 id="重写equals、hashcode"><a href="#重写equals、hashcode" class="headerlink" title="重写equals、hashcode"></a>重写equals、hashcode</h2><p>Student类的重写后的equals方法和hashcode方法。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EqualsAndHashcode</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">	<span class="keyword">private</span> int age;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">public</span> int hashCode() &#123;</span><br><span class="line">		<span class="keyword">final</span> int prime = <span class="number">31</span>;</span><br><span class="line">		int result = <span class="number">1</span>;</span><br><span class="line">		result = prime * result + age;</span><br><span class="line">		result = prime * result + ((name == <span class="literal">null</span>) ? <span class="number">0</span> : name.hashCode());</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">public</span> boolean equals(Object obj) &#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">this</span> == obj)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">if</span> (obj == <span class="literal">null</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">if</span> (getClass() != obj.getClass())</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		EqualsAndHashcode other = (EqualsAndHashcode) obj;</span><br><span class="line">		<span class="keyword">if</span> (age != other.age)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">if</span> (name == <span class="literal">null</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (other.name != <span class="literal">null</span>)</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (!name.equals(other.name))</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>现有两个Student对象：</p>
+<pre><code>Student s1=new Student(&quot;小明&quot;,18);
+
+Student s2=new Student(&quot;小明&quot;,18);
+</code></pre><p>此时s1.equals(s2)一定返回true</p>
+<p>假如只重写equals而不重写hashcode，那么Student类的hashcode方法就是Object默认的hashcode方法，由于默认的hashcode方法是根据对象的内存地址经哈希算法得来的，显然此时<strong>s1!=s2</strong>,故两者的hashcode不一定相等。</p>
+<p>然而重写了equals，且s1.equals(s2)返回true，根据hashcode的规则，两个对象相等其哈希值一定相等，所以矛盾就产生了，因此重写equals一定要重写hashcode，而且从Student类重写后的hashcode方法中可以看出，重写后返回的新的哈希值与Student的两个属性有关。</p>
 
       
     </div>
@@ -406,7 +413,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://cy-xin.github.io/2019/05/22/我的第一篇博客文章/" title="我的第一篇博客文章">https://cy-xin.github.io/2019/05/22/我的第一篇博客文章/</a>
+    <a href="https://cy-xin.github.io/2019/06/11/为什么重写equals一定要重写hashcode？/" title="为什么重写equals一定要重写hashcode？">https://cy-xin.github.io/2019/06/11/为什么重写equals一定要重写hashcode？/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -426,15 +433,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/06/09/对象和垃圾回收/" rel="next" title="对象和垃圾回收">
+                <i class="fa fa-chevron-left"></i> 对象和垃圾回收
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/31/Java程序语言的运行机制/" rel="prev" title="Java程序语言的运行机制">
-                Java程序语言的运行机制 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -478,8 +485,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -564,6 +580,24 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#重写equals、hashcode"><span class="nav-number">1.</span> <span class="nav-text">重写equals、hashcode</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+		
+      <!--/noindex-->
       
 
       
