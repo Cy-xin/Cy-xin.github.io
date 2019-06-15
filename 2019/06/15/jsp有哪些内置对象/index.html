@@ -96,19 +96,17 @@
 
 
 
-  <meta name="description" content="对象与垃圾回收Java垃圾回收是Java语言的重要功能之一。当创建对象、数组等引用类型实体时，系统都会在堆内存中位置分配一块内存区，对象就保存在这个内存区中。当这块内存不在被任何引用变量引用时，这块内存就变成了垃圾，等待回收机制在合适的时候进行回收。 垃圾回收机制有如下特征：  垃圾回收机制只负责堆内存中的对象。 垃圾回收会在合适的时候进行回收。当对象永久性的不再被引用，系统会在合适的时候回收它所">
+  <meta name="description" content="jsp内置对象 request：包含用户端请求信息 response：包含服务端响应给客户端的信息 session：与请求有关的会话其期 pageContext：管理网页属性 application：服务器的启动创建、关闭停止，为多个应用程序保存信息 out：向客户端传输数据 config：servlet架构组件 page：网页本身 exception：针对错误页面使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对象和垃圾回收">
-<meta property="og:url" content="https://cy-xin.github.io/2019/06/09/对象和垃圾回收/index.html">
+<meta property="og:title" content="jsp9大内置对象">
+<meta property="og:url" content="https://cy-xin.github.io/2019/06/15/jsp有哪些内置对象/index.html">
 <meta property="og:site_name" content="醉卧沙场君莫笑の博客">
-<meta property="og:description" content="对象与垃圾回收Java垃圾回收是Java语言的重要功能之一。当创建对象、数组等引用类型实体时，系统都会在堆内存中位置分配一块内存区，对象就保存在这个内存区中。当这块内存不在被任何引用变量引用时，这块内存就变成了垃圾，等待回收机制在合适的时候进行回收。 垃圾回收机制有如下特征：  垃圾回收机制只负责堆内存中的对象。 垃圾回收会在合适的时候进行回收。当对象永久性的不再被引用，系统会在合适的时候回收它所">
+<meta property="og:description" content="jsp内置对象 request：包含用户端请求信息 response：包含服务端响应给客户端的信息 session：与请求有关的会话其期 pageContext：管理网页属性 application：服务器的启动创建、关闭停止，为多个应用程序保存信息 out：向客户端传输数据 config：servlet架构组件 page：网页本身 exception：针对错误页面使用">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190609183537750.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEwNzYxNw==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-06-09T10:48:20.898Z">
+<meta property="og:updated_time" content="2019-06-15T03:00:05.235Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="对象和垃圾回收">
-<meta name="twitter:description" content="对象与垃圾回收Java垃圾回收是Java语言的重要功能之一。当创建对象、数组等引用类型实体时，系统都会在堆内存中位置分配一块内存区，对象就保存在这个内存区中。当这块内存不在被任何引用变量引用时，这块内存就变成了垃圾，等待回收机制在合适的时候进行回收。 垃圾回收机制有如下特征：  垃圾回收机制只负责堆内存中的对象。 垃圾回收会在合适的时候进行回收。当对象永久性的不再被引用，系统会在合适的时候回收它所">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190609183537750.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEwNzYxNw==,size_16,color_FFFFFF,t_70">
+<meta name="twitter:title" content="jsp9大内置对象">
+<meta name="twitter:description" content="jsp内置对象 request：包含用户端请求信息 response：包含服务端响应给客户端的信息 session：与请求有关的会话其期 pageContext：管理网页属性 application：服务器的启动创建、关闭停止，为多个应用程序保存信息 out：向客户端传输数据 config：servlet架构组件 page：网页本身 exception：针对错误页面使用">
 
 
 
@@ -116,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="https://cy-xin.github.io/2019/06/09/对象和垃圾回收/">
+  <link rel="canonical" href="https://cy-xin.github.io/2019/06/15/jsp有哪些内置对象/">
 
 
 
@@ -126,7 +124,7 @@
   };
 </script>
 
-  <title>对象和垃圾回收 | 醉卧沙场君莫笑の博客</title>
+  <title>jsp9大内置对象 | 醉卧沙场君莫笑の博客</title>
   
 
 
@@ -278,7 +276,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cy-xin.github.io/2019/06/09/对象和垃圾回收/">
+    <link itemprop="mainEntityOfPage" href="https://cy-xin.github.io/2019/06/15/jsp有哪些内置对象/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="醉卧沙场君莫笑">
@@ -295,7 +293,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">对象和垃圾回收
+          <h1 class="post-title" itemprop="name headline">jsp9大内置对象
 
               
             
@@ -321,7 +319,7 @@
                 
               
 
-              <time title="创建时间：2019-06-09 18:48:13 / 修改时间：18:48:20" itemprop="dateCreated datePublished" datetime="2019-06-09T18:48:13+08:00">2019-06-09</time>
+              <time title="创建时间：2019-06-15 10:59:57 / 修改时间：11:00:05" itemprop="dateCreated datePublished" datetime="2019-06-15T10:59:57+08:00">2019-06-15</time>
             
 
             
@@ -360,20 +358,17 @@
       
 
       
-        <h1 id="对象与垃圾回收"><a href="#对象与垃圾回收" class="headerlink" title="对象与垃圾回收"></a>对象与垃圾回收</h1><p>Java垃圾回收是Java语言的重要功能之一。当创建对象、数组等引用类型实体时，系统都会在堆内存中位置分配一块内存区，对象就保存在这个内存区中。当这块内存不在被任何引用变量引用时，这块内存就变成了垃圾，等待回收机制在合适的时候进行回收。</p>
-<p>垃圾回收机制有如下特征：</p>
-<ul>
-<li>垃圾回收机制只负责堆内存中的对象。</li>
-<li>垃圾回收会在合适的时候进行回收。当对象永久性的不再被引用，系统会在合适的时候回收它所占用的内存。</li>
-<li>在垃圾回收机制回收任何对象之前，总会先调用它的finalize()方法，该方法可能使对象重新复活，从而导致垃圾回收机制取消回收。</li>
-</ul>
-<h2 id="对象在内存中状态"><a href="#对象在内存中状态" class="headerlink" title="对象在内存中状态"></a>对象在内存中状态</h2><p>分为三种状态：<strong>可达状态、可恢复状态、不可达状态</strong>。</p>
-<ol>
-<li>可达状态：对象创建之后，若又一个以上的引用变量引用它，则这个对象就处于可达状态。程序通过引用变量来调用这个对象的方法和实例变量。</li>
-<li>可恢复状态：如果程序中某个对象不再有任何引用变量引用它，它处于可恢复状态。在这个状态下，垃圾回收准备回收对象所占用的内存，在回收任对象之前，系统会先调用所有可恢复状态的对象的finalize()方法进行资源管理。若重新引用，则变成可达状态，否则进入不可达状态。</li>
-<li>不可达状态：当对象与所有的引用变量的关联被切断，系统调用了finalize()方法依然没有达到可达状态，那么这个对象将永久性的失去引用，最后变成不可达状态。处于不可达状态的对象，系统才会真正回收该对象所占用的资源。</li>
+        <h1 id="jsp内置对象"><a href="#jsp内置对象" class="headerlink" title="jsp内置对象"></a>jsp内置对象</h1><ol>
+<li>request：包含用户端请求信息</li>
+<li>response：包含服务端响应给客户端的信息</li>
+<li>session：与请求有关的会话其期</li>
+<li>pageContext：管理网页属性</li>
+<li>application：服务器的启动创建、关闭停止，为多个应用程序保存信息</li>
+<li>out：向客户端传输数据</li>
+<li>config：servlet架构组件</li>
+<li>page：网页本身</li>
+<li>exception：针对错误页面使用</li>
 </ol>
-<p><img src="https://img-blog.csdnimg.cn/20190609183537750.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEwNzYxNw==,size_16,color_FFFFFF,t_70" alt="对象状态转换图"></p>
 
       
     </div>
@@ -420,7 +415,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://cy-xin.github.io/2019/06/09/对象和垃圾回收/" title="对象和垃圾回收">https://cy-xin.github.io/2019/06/09/对象和垃圾回收/</a>
+    <a href="https://cy-xin.github.io/2019/06/15/jsp有哪些内置对象/" title="jsp9大内置对象">https://cy-xin.github.io/2019/06/15/jsp有哪些内置对象/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -440,8 +435,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/08/多态/" rel="next" title="多态">
-                <i class="fa fa-chevron-left"></i> 多态
+              <a href="/2019/06/15/SSM面试题/" rel="next" title="SSM面试题">
+                <i class="fa fa-chevron-left"></i> SSM面试题
               </a>
             
           </div>
@@ -449,10 +444,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/11/为什么重写equals一定要重写hashcode？/" rel="prev" title="为什么重写equals一定要重写hashcode？">
-                为什么重写equals一定要重写hashcode？ <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -602,7 +593,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#对象与垃圾回收"><span class="nav-number">1.</span> <span class="nav-text">对象与垃圾回收</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#对象在内存中状态"><span class="nav-number">1.1.</span> <span class="nav-text">对象在内存中状态</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#jsp内置对象"><span class="nav-number">1.</span> <span class="nav-text">jsp内置对象</span></a></li></ol></div>
             
 
           </div>
